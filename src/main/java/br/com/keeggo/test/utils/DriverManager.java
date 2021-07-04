@@ -10,41 +10,40 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 
-	private WebDriverManager webDriverManager;
 	private WebDriver webDriver;
 
-	@SuppressWarnings("static-access")
+	
 	public void iniciarNavegador(String browserName) {
 		switch (browserName) {
 		case "Firefox":
 			if (webDriver == null) {
-				webDriverManager.firefoxdriver().setup();
+				WebDriverManager.firefoxdriver().setup();
 				webDriver = new FirefoxDriver();
 			}
 			break;
 
 		case "IE":
 			if (webDriver == null) {
-				webDriverManager.iedriver().setup();
+				WebDriverManager.iedriver().setup();
 				webDriver = new InternetExplorerDriver();
 			}
 			break;
 
 		case "Chrome":
 			if (webDriver == null) {
-				webDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().setup();
 				webDriver = new ChromeDriver();
 			}
 			break;
 		}
 	}
+	
+	public void abrirUrl(String url) {
+		webDriver.get(url);
+	}
 
-//	public  void LoadApplication(string url) {
-//		Driver.Url = url;
-//	}
 
 	public void fecharDriver() {
-		webDriver.close();
 		webDriver.quit();
 	}
 }

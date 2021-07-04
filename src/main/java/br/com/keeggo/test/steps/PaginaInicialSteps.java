@@ -1,11 +1,16 @@
 package br.com.keeggo.test.steps;
 
+import br.com.keeggo.test.utils.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Quando;
 
+
 public class PaginaInicialSteps {
 
-	public PaginaInicialSteps() {
+	TestContext testContext;
+	
+	public PaginaInicialSteps(TestContext context) {
+		testContext = context;
 	}
 
 	@Dado("que o usuario esta na pagina inicial do site Advantage")

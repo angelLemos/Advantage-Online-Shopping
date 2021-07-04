@@ -1,12 +1,17 @@
 package br.com.keeggo.test.steps;
 
+import br.com.keeggo.test.utils.TestContext;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
+
+
 public class CadastrarUsuarioStep {
 
-	public CadastrarUsuarioStep() {
-
+	TestContext testContext;
+	
+	public CadastrarUsuarioStep(TestContext context) {
+		testContext = context;
 	}
 
 	@Quando("preencher ficha cadastral")
