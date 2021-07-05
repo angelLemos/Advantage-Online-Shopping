@@ -9,4 +9,4 @@ Funcionalidade: Cadastrar Usuario
   Cenario: Realizar cadastrar no site Advantage
   
     E preencher ficha cadastral
-    Entao cadastro realizado com sucesso 
+    Entao usuario realizou login com sucesso 

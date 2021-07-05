@@ -2,12 +2,12 @@
 Funcionalidade: Realizar Login
 
   Contexto: 
-    Dado que usuario esta na pagina inicial do site Advantage
-    Quando clicar no botao de login
+    Dado que o usuario esta na pagina inicial do site Advantage
+    Quando clicar no icone de usuario
 
   @RealizarLogin
   Cenario: Realizar login no site Advantage
   
     E preencher dados para login
-    Entao login realizado com sucesso 
+    Entao usuario realizou login com sucesso 
   

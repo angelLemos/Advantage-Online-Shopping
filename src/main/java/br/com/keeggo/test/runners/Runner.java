@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "br.com.keeggo.test.steps" }, tags =
-		"@RealizarCadastro" )
+{"@RealizarLogin, @RealizarCadastro"})
 public class Runner {
 
 }
