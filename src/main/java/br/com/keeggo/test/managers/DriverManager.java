@@ -65,6 +65,7 @@ public class DriverManager {
 	}
 
 	public void fecharDriver() {
+		webDriver.close();
 		webDriver.quit();
 	}
 }

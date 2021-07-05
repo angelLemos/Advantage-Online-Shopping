@@ -11,7 +11,7 @@ import br.com.keeggo.test.enums.DriverType;
 public class ConfigFileReader {
 	
 	private Properties prop;
-	private final String local= "configs//Configuracao.properties";
+	private final String local= "configs//Configuration.properties";
 
 	public ConfigFileReader(){
 		 BufferedReader reader;
@@ -56,10 +56,16 @@ public class ConfigFileReader {
 			try{
 				return Long.parseLong(implicitlyWait);
 			}catch(NumberFormatException e) {
-				throw new RuntimeException("Not able to parse value : " + implicitlyWait + " in to Long");
+				throw new RuntimeException("Não é possível analisar o valor : " + implicitlyWait + "dentro do tempo");
 			}
 		}
 		return 30;		
+	}
+	
+	public String getReportConfigPath(){
+	 String reportConfigPath = prop.getProperty("caminhoExtendConfig");
+	 if(reportConfigPath!= null) return reportConfigPath;
+	 else throw new RuntimeException("Caminho de configuração do relatório não especificado no arquivo Configuration.properties para a chave: caminhoExtendConfig"); 
 	}
 		 
 }
