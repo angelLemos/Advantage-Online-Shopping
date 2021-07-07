@@ -21,7 +21,7 @@ public class DriverManager {
 		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
 	}
 
-	public WebDriver iniciarNavegador() {
+	public WebDriver startBrowser() {
 		switch (driverType) {
 		case FIREFOX:
 			if (webDriver == null) {
@@ -53,18 +53,18 @@ public class DriverManager {
 	}
 	
 
-	public WebDriver criarDriver() {
+	public WebDriver createDriver() {
 		if (webDriver == null)
-			webDriver = iniciarNavegador();
+			webDriver = startBrowser();
 		return webDriver;
 
 	}
 
-	public void abrirUrl(String url) {
+	public void getUrl(String url) {
 		webDriver.get(url);
 	}
 
-	public void fecharDriver() {
+	public void quitDriver() {
 		webDriver.close();
 		webDriver.quit();
 	}
