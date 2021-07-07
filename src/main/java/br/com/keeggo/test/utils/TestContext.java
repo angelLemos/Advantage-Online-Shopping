@@ -10,7 +10,7 @@ public class TestContext {
 
 	public TestContext() {
 		webDriverManager = new DriverManager();
-		pageObjectManager = new PageObjectManager(webDriverManager.criarDriver());
+		pageObjectManager = new PageObjectManager(webDriverManager.createDriver());
 	}
 
 	public DriverManager getWebDriverManager() {

@@ -31,7 +31,7 @@ public class TelaInicialPage {
 
 	public void aguardarElemento() {
 		js = (JavascriptExecutor) driver;
-		js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1],3000);");
+		js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1],5000);");
 	}
 
 	public String nomeUsuario() {

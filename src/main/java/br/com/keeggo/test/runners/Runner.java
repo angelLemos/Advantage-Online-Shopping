@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = "br.com.keeggo.test.steps", tags = {
-		"@RealizarLogin" }, plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html")
+		"@RealizarCadastro, @RealizarLogin" }, plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html")
 public class Runner {
 
 	@AfterClass
