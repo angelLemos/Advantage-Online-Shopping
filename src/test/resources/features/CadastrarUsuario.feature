@@ -6,7 +6,7 @@ Funcionalidade: Cadastrar Usuario
     Quando clicar no icone de usuario
 
   @RealizarCadastro
-  Cenario: Realizar cadastrar no site Advantage
+  Cenario: Realizar cadastro no site Advantage
   
     E preencher ficha cadastral
-    Entao usuario realizou login com sucesso 
+    Entao usuario cadastrado com sucesso 
