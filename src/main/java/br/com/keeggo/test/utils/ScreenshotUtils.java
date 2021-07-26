@@ -2,6 +2,9 @@ package br.com.keeggo.test.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -9,11 +12,11 @@ import org.openqa.selenium.TakesScreenshot;
 
 import com.cucumber.listener.Reporter;
 
-public class Screenshot {
+public class ScreenshotUtils {
 
-	private TestContext testContext;
+	private TestContextUtils testContext;
 
-	public Screenshot(TestContext context) {
+	public ScreenshotUtils(TestContextUtils context) {
 		testContext = context;
 	}
 
@@ -21,6 +24,15 @@ public class Screenshot {
  
 		File sourcePath = ((TakesScreenshot) testContext.getWebDriverManager().createDriver())
 				.getScreenshotAs(OutputType.FILE);
+		
+		 String user = System.getProperty("user.dir");
+		 Path path = Paths.get(user + "\\AdvantageShopping\\target\\cucumber-reports\\screenshots");
+
+		    try {
+				Files.createDirectories(path);
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 		String caminhoDoArquivo = System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/"
 				+ screenshotName + ".png";
 

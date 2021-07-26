@@ -3,8 +3,8 @@ package br.com.keeggo.test.steps;
 import org.openqa.selenium.WebDriver;
 
 import br.com.keeggo.test.pages.TelaInicialPage;
-import br.com.keeggo.test.utils.Screenshot;
-import br.com.keeggo.test.utils.TestContext;
+import br.com.keeggo.test.utils.ScreenshotUtils;
+import br.com.keeggo.test.utils.TestContextUtils;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Quando;
 
@@ -12,15 +12,15 @@ import cucumber.api.java.pt.Quando;
 public class PaginaInicialSteps {
 
 	WebDriver driver;
-	private TestContext testContext;
+	private TestContextUtils testContext;
 	private TelaInicialPage telaInicialPage;
 	private String stepName;
-	private Screenshot screenshot;
+	private ScreenshotUtils screenshot;
 	
-	public PaginaInicialSteps(TestContext context) {
+	public PaginaInicialSteps(TestContextUtils context) {
 		testContext = context;
 		telaInicialPage = testContext.getPageObjectManager().getTelaInicialPage();
-		screenshot = new Screenshot(context);
+		screenshot = new ScreenshotUtils(context);
 	}
 
 	@Dado("que o usuario esta na pagina inicial do site Advantage")

@@ -5,26 +5,26 @@ import org.openqa.selenium.WebDriver;
 
 import br.com.keeggo.test.pages.TelaInicialPage;
 import br.com.keeggo.test.pages.TelaLoginPage;
-import br.com.keeggo.test.utils.Screenshot;
-import br.com.keeggo.test.utils.TestContext;
+import br.com.keeggo.test.utils.ScreenshotUtils;
+import br.com.keeggo.test.utils.TestContextUtils;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
 public class RealizarLoginStep {
 	
 	WebDriver driver;
-	private TestContext testContext;
+	private TestContextUtils testContext;
 	private TelaLoginPage telaLoginPage;
 	private TelaInicialPage telaInicialPage;
-	private Screenshot screenshot;
+	private ScreenshotUtils screenshot;
 	private String nomeUsuario = "LuizaM";
 	
 
-	public RealizarLoginStep(TestContext context) {
+	public RealizarLoginStep(TestContextUtils context) {
 		testContext = context;
 		telaLoginPage = testContext.getPageObjectManager().getTelaLoginPage();
 		telaInicialPage = testContext.getPageObjectManager().getTelaInicialPage();
-		screenshot = new Screenshot(context);
+		screenshot = new ScreenshotUtils(context);
 
 	}
 

@@ -8,13 +8,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import br.com.keeggo.test.enums.DriverType;
-import br.com.keeggo.test.utils.TestContext;
+import br.com.keeggo.test.utils.TestContextUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 
 	private WebDriver webDriver;
-	public TestContext testContext;
+	public TestContextUtils testContext;
 	private static DriverType driverType;
 
 	public DriverManager() {
